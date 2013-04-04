@@ -39,8 +39,8 @@ function createClient(port, host, options) {
   client._bad_info_er = new Error('You must run .auth() immediately after .createClient()')
 
   commands.forEach(function(command) {
-    if(client.hasOwnProperty(command))
-      throw new Error('Substututing non-prototype command not supported: ' + command)
+    // if(client.hasOwnProperty(command))
+      // throw new Error('Substututing non-prototype command not supported: ' + command)
 
     if(command == 'info')
       client[command] = bad_info
